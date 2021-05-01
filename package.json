@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start -p 4000"
+    "start": "next-boost -p 4000"
   },
   "dependencies": {
     "next": "10.2.0",
+    "next-boost": "^0.10.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-uuid": "^1.0.2"
