@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import uuid from "react-uuid";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   // const data = await fetchData("https://www.healthcare.gov/api/articles.json");
@@ -21,7 +22,7 @@ const Home = ({ articles }) => {
   return (
     <article>
       <h1>HealthCare.gov Articles</h1>
-      <a href="/other-page">other page</a>
+      <Link href="/other-page">other page</Link>
       <table>
         <thead>
           <tr>
