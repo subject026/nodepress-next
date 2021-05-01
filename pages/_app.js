@@ -2,7 +2,7 @@ import "tailwindcss/tailwind.css";
 
 export function reportWebVitals(metric) {
   if (metric.label === "custom") {
-    console.log(metric);
+    console.log("\n\ntime:", metric.value, "\n\n");
   }
 }
 
