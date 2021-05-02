@@ -8,9 +8,16 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm run install
-      - run: npm run build
+
+      - name: install
+        run: npm run install
+
+      - name: build
+        run: npm run build
