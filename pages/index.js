@@ -23,6 +23,8 @@ const Home = ({ articles }) => {
     <article>
       <h1>HealthCare.gov Articles</h1>
       <Link href="/other-page">other page</Link>
+      <br></br>
+      <Link href="/another-other-page">another other page</Link>
       <table>
         <thead>
           <tr>
