@@ -2,15 +2,22 @@ name: Next Blob Integration
 
 on:
   pull_request:
-  branches: [main]
+    branches: [main]
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    - run: npm ci
-    - run: npm test
-    - run: npm run build
+  test_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: install
+        run: npm run install
+
+      - name: build
+        run: npm run build
